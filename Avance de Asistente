@@ -76,10 +76,10 @@
     }
     </style>
     
-<div class="helpsticky__menu" style="display: block;">
+<div class="helpsticky__menu" style="display: block;">            
     
     <button class="helpsticky__item helpsticky__item__script helpsticky__item--active" type="button" data-component="helpstickybuttom" aria-expanded="true" aria-label="Chat" data-component-id="9b041e4b-beba-42aa-91a9-896621e57d95">
-            <img class="bbva-svgicon bbva-svgicon--largemobile" src="/content/dam/public-web/global/images/icons/4_010_communication.svg" alt="">
+            <img class="bbva-svgicon bbva-svgicon--largemobile" src="/content/dam/public-web/global/images/icons/4_010_communication.svg" alt=""> 
         <span>Chat</span>
     </button>
 
@@ -89,22 +89,8 @@ window.chatWrapper = {
 pathApp: 'https://chatbot.bbva.pe/',                       //diseño del chat
 authenticated: false,
 buttonSelector: 'button.helpsticky__item:first-of-type',   //aparece y desaparece la ventana al presionar sobre el boton chat
-origin: function(){
-       if(document.location.href.indexOf('sos-cliente.html') >= 0)  {
-         return 'sos cliente'
-       } else if(document.location.href.indexOf('libro-de-reclamaciones.html') >= 0)  {
-         return 'libro de reclamaciones'
-       } else {
-         return 'otros'
-       }
-     }(),
-show: function(){
-     if(document.location.href.indexOf('sos-cliente.html') >= 0)  {
-        return true
-     };
-return false;
-   }()
 }
+            
 </script>
 
 <script type="text/javascript" src="https://chatbot.bbva.pe/resources/chatbot-wrapper.js"></script>
@@ -119,5 +105,4 @@ return false;
             <img class="asd" src="dfg" alt="">
             <span>Comunicate directamente con un asistente</span>
         </a>
-
   </div>
