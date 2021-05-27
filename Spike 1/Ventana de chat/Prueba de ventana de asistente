@@ -1,0 +1,108 @@
+<html lang="es-PE"><head>
+    <title>ChaloBot</title>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+   <style id="style-chat-wrapper">
+    .chatWrapper {
+      background-color: lawngreen;
+      width: 360px;                         /*ancho de la ventana*/
+      position: fixed;                      /*posiciona la ventana*/
+      bottom: 0;                            /*posicion vertical*/
+      right: 40px;                          /*posicion horizontal*/
+      box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);        /*borde de la ventana, sombreado*/
+      transition: 0.3s height cubic-bezier(0,1,1,1);    /*tiempo de aparicion*/
+      z-index: 999;                         
+      min-height: 0;
+      height: 0px;
+    }
+    .chatWrapper iframe {
+      border: 0;                /*borde de ventana*/
+      width: 100%;                /*posicion de texto en la ventana vertical*/
+      height: 100%;               /*posicion de texto en la ventana vertical*/          
+      /* transform: translate(0, 100%); */
+      opacity: 0;
+      transition: 1s opacity cubic-bezier(0,1,1,1);
+    }
+    .chatWrapper.ready-frame iframe {
+      transform: translate(0, 0);        /*opacidad del fondo con el texto*/
+      opacity: 1;
+    }
+    /*.chatWrapper.hide {                
+      height: 0px;
+    }*/
+    .chatWrapper.minimize {               /*ventana minimizada*/
+      height: 48px;
+    }
+    .chatWrapper.maximize {
+      height: 640px;
+    }
+
+    .chatWrapper > svg {
+      position: absolute;
+      width: 48px;                        /*posicion del icono*/
+      height: 48px;
+      top: calc(50% - 24px);
+      right: calc(50% - 24px);
+      pointer-events: none;
+      transition: 1s opacity cubic-bezier(0,1,1,1);
+      opacity: 1;
+    }
+    .chatWrapper.ready-frame > svg {
+      opacity: 0;
+    }
+
+    @media (max-width:768px) {
+      .chatWrapper {
+        width: 100%!important;
+        transition: none!important;
+        top: 0!important;
+        left: 0!important;
+      }
+      .chatWrapper.maximize {
+        height: 100%!important;
+      }
+      .chatWrapper.close {
+        height: 0!important;
+        width: 0!important;
+      }
+      .chatWrapper.minimize {
+        height: 68px!important;
+        top: initial!important;
+        transition: 0.3s height cubic-bezier(0,1,1,1)!important;
+      }
+
+    }
+    </style>
+    
+<div class="helpsticky__menu" style="display: block;">            
+    
+    <button class="helpsticky__item helpsticky__item__script helpsticky__item--active" type="button" data-component="helpstickybuttom" aria-expanded="true" aria-label="Chat" data-component-id="9b041e4b-beba-42aa-91a9-896621e57d95">
+            <img class="bbva-svgicon bbva-svgicon--largemobile" src="/content/dam/public-web/global/images/icons/4_010_communication.svg" alt=""> 
+        <span>Chat</span>
+    </button>
+
+    
+        <script type="text/javascript">
+window.chatWrapper = {
+pathApp: 'https://chatbot.bbva.pe/',                       //diseño del chat
+authenticated: false,
+buttonSelector: 'button.helpsticky__item:first-of-type',   //aparece y desaparece la ventana al presionar sobre el boton chat
+}
+            
+</script>
+
+<script type="text/javascript" src="https://chatbot.bbva.pe/resources/chatbot-wrapper.js"></script>
+    
+    
+        <button class="helpsticky__item" type="button" data-component="helpstickybuttom" data-component-params="{&quot;isLink&quot;: &quot;true&quot;, &quot;data&quot;: {&quot;target&quot;: &quot;_self&quot;, &quot;linkURL&quot;:&quot;/personas/sos-cliente.html&quot;}}" aria-label="SOS Cliente" aria-expanded="false" data-component-id="1f82551d-4cc4-407a-af56-a0e973e42975">
+            <img class="bbva-svgicon bbva-svgicon--largemobile" src="/content/dam/public-web/global/images/icons/1_024_insurance.svg" alt="">
+            <span>Preguntas Frecuentes</span>
+        </button>
+    
+        <a class="helpsticky__item helpsticky__item--link lightbox--ready" href="ref html redireccion para comunicarse" target="_lightbox" data-lightbox-ismodal="false" aria-label="Comunicate directamente con un asistente" aria-expanded="false" aria-haspopup="true">
+            <img class="asd" src="dfg" alt="">
+            <span>Comunicate directamente con un asistente</span>
+        </a>
+  </div>
