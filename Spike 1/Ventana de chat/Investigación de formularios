@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="Diseño.css">
+</head>
+    <head>
+    <title>Formulario</title>
+    <script type="text/javascript">
+
+        function validar_datos(){
+
+            let nombre, apellido, correo, texto2, termino2;
+
+            nombre= document.getElementById("nombre").value;
+            apellido= document.getElementById("apellido").value;
+            email= document.getElementById("email").value;
+            termino2= document.getElementById("termino2").checked;
+
+
+            let expRegName= /^[a-zA-Z]+[\s|-]?[a-zA-Z]+[\s|-]?[a-zA-Z]+$/;
+            let expRegEmail= /^[\w]+@{1}[\w]+\.+[a-z]{2,3}$/;
+
+            if(nombre=="" || apellido=="" || email=="" || termino2.checked){    
+                alert("Debe completar los campos");
+                return false;
+            }
+            
+            else if(!expRegEmail.test(email)){
+                alert("Correo invalido");
+                return false;
+            }
+            
+            else if(!expRegName.test(nombre)){
+                alert("Nombre invalido");
+                return false;
+            }
+            
+            else if(!expRegName.test(apellido)){
+                alert("Apellido invalido");
+                return false;
+            }
+            
+            else if(!termino2){
+                alert("Acepte los terminos y condiciones");
+                return false;
+            }
+            
+            else {
+                alert("Formulario Enviado")
+            }
+        }
+    </script>
+    </head>
+<style>
+input,textarea,button {
+  border: 2px solid red;
+  border-radius: 12px;
+  padding: 4px;
+  border: 5px solid gray;
+  margin: 0;
+}
+    
+h1 {
+  background-color: black;
+  color: white;
+}
+</style>
+<body>
+    
+<h1>Prueba de formularios</h1>
+
+<form  name="form" method="GET" id="form" onsubmit="return validar_datos();">
+<h4>
+    <label for="pnombre"><b>Nombre:</b></label>
+    <input type="text" maxlength="50" id="nombre" name="nombre" placeholder="Ingrese su nombre"><br><br>
+    
+    <label for="apellido"><b>Apellido:</b></label>
+    <input type="text" maxlength="50" id="apellido" name="apellido" placeholder="Ingrese su Apellido"><br><br>
+    
+    <label for="correo"><b>Correo:</b></label>
+    <input type="text" id="email" name="email" placeholder="Ingrese su correo"><br><br>
+    
+    
+    <label for="sex"><b>Sexo:</b></label>
+    <input type="radio" name="sexo" value="Varón"> Varon 
+    <input type="radio" name="sexo" value="Mujer" checked="checked"> Mujer<br><br>
+    
+    <label for="pobl"><b>Poblacion:</b></label>
+        <select name="Lugares" size="1">
+        <option value="a">AREQUIPA</option>
+        <option value="b">CUSCO</option>
+        <option value="c">LIMA</option>
+        <option value="d">PUNO</option>
+        </select>
+        
+    <br><br>
+    <label for="desc"><b>Descripcion:</b></label>
+    <textarea name="message" rows="10" cols="50" > </textarea><br><br>
+    
+    
+    <input type="checkbox" id="termino1" name="termino1" value="termino1" checked="checked">
+    <label for="tex1">Deseo recibir información sobre novedades y ofertas</label><br><br>
+    
+    
+    <input type="checkbox" id="termino2" name="termino2" cheked="termino2" for="text" >Declaro haber leido y aceptar las condiciones generales del programa y la normativa sobre protección de datos<br><br><br>
+</h4>
+    
+    <button onclick="validar_datos();"> Enviar datos</button>
+</form> 
+
+</body>
+</html>
