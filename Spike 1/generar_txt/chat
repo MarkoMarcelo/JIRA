@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+
+    </script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.container {
+  border: 2px solid #380000;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.darker {
+  border-color: rgb(0, 40, 114);
+  background-color: rgb(255, 255, 255);
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+
+.time-right {
+  float: right;
+  color: #380000;
+}
+
+.time-left {
+  float: left;
+  color: rgb(0, 40, 114);
+}
+</style>
+</head>
+<body>
+
+<h2>Chat</h2>
+
+<div class="container">
+  <img src="/bot.jpg" alt="Avatar" style="width:100%;">
+  <p>Hola, primer mensaje que te puedo dar</p>
+  <span class="time-right">(tiempo)/opcional</span>
+</div>
+
+<div class="container darker">
+  <img src="/bot.png" alt="Avatar" class="right" style="width:100%;">
+  <p>Esta es una respuesta</p>
+  <span class="time-left">(tiempo)/opcional</span>
+</div>
+
+<div class="container">
+  <img src="/bot.jpg" alt="Avatar" style="width:100%;">
+  <p>Veré como responder</p>
+  <span class="time-right">(tiempo)/opcional</span>
+</div>
+
+<div class="container darker">
+  <img src="/bot.png" alt="Avatar" class="right" style="width:100%;">
+  <p>ultimo insert</p>
+  <span class="time-left">(tiempo)/opcional</span>
+</div>
+
+<div class="container">
+    <img src="/bot.jpg" alt="Avatar" style="width:100%;">
+    <p>Veré como responder</p>
+    <span class="time-right">(tiempo)/opcional</span>
+</div>
+<div class="container darker">
+    <img src="/bot.png" alt="Avatar" class="right" style="width:100%;">
+    <p>ultimo insert</p>
+    <span class="time-left">(tiempo)/opcional</span>
+</div>
+<div class="container">
+    <img src="/bot.jpg" alt="Avatar" style="width:100%;">
+    <p>Veré como responder</p>
+    <span class="time-right">(tiempo)/opcional</span>
+</div>
+</body>
+</html>
