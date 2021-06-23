@@ -8,3 +8,5 @@ text2="Hola mi nombre es John. Soy ingresante a CPCC. Estoy feliz!" #funciona en
 print(word_tokenize(text2))
 print(sent_tokenize(text2))
 
+#haciendo pruibas dentro de github para
+
