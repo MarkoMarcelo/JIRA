@@ -42,7 +42,7 @@ pairs = [			#MATRICULA GENERAL
     ],
     [
     	r"(.*)creditos(.*)aprobar(.*)",#  ||(.*)creditos(.*)pasar(.*)
-    	["Se necesitan 15 creditos para rpobar el semestre",]
+    	["Se necesitan 15 creditos para aprobar el semestre",]
     ],
     [			#DESPUES DE LA MATRICULA
     	r"(.*)hoja de matricula(.*)",#funciona-
