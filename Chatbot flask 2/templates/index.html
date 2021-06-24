@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChaloBot</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="chatbox">
+            <div class="header">
+                ChaloBot
+            </div>
+
+            <div class="body" id = "chatbox">
+                <p class = "alicia">Hola! soy ChaloBot, Estoy para responder preguntas relacionadas a la matricula. Espero poder ayudarte.</p>
+            </div>
+
+            
+            <div id = "userInput">
+                    <input id ="textInput" type ="text" name="msg" placeholder="Escribe un mensaje" style=" font-family: cursive; font-size: 20px;">
+                    <input id = "buttonInput" type = "submit" value="Enviar">
+            </div>
+            
+        </div>
+    </div>
+    
+    
+    
+    
+    <script>
+        function getBotResponse(){
+            var rawText = $("#textInput").val();//almacenar lo que ingrese el usuario
+            var userHtml='<div class="me visible">'+rawText+'</div>';//variable para imprimir por pantalla lo que ingreso el usuario
+            $("#textInput").val("");//cambia el valor del input a vacio porque su valor ya se imprimio
+            $("#chatbox").append(userHtml);//añade el elemento al container
+            document.getElementById('userInput').scrollIntoView({block:'start',behaviour:'smooth'});//solo para la barra de dezplazamiento
+            $.get("/get",{msg:rawText}).done(function(data){//esto es para obtener el response dek main
+                var botHtml='<div class="alicia visible">'+data+'</div>';//aqui se almacenara  la respuesta
+                $("#chatbox").append(botHtml);//se  imprime la respuesta 
+                document.getElementById('userInput').scrollIntoView({block:'start', behaviour:'smooth'});//solo para la barra de dezplazamiento
+            });
+        }
+        $("#textInput").keypress(function(e){//si presiona enter 
+            if(e.which==13){
+                getBotResponse();
+            }
+        });
+        $("#buttonInput").click(function(){// si hace click en enviar
+            getBotResponse();
+        })
+
+    </script>
+</body>
+</html>
