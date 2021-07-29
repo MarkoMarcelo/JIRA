@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChaloBot</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="chatbox">
+            <div id="header" class="header">
+                <h6>
+                    <div class="header-icons">
+                        <button class="icon" id="btn-right-secondary" hidden="">
+                          <bbva-core-icon size="20" style="width: 1.25rem; height: 1.25rem;"></bbva-core-icon>
+                        </button>
+                    
+                        <button class="icon" id="btn-right-primary" aria-label="Close">
+                            <bbva-core-icon icon="coronita:close" size="20" style="width: 1.25rem; height: 1.25rem;"><svg viewBox="0 0 260 260" preserveAspectRatio="xMidYMid meet" focusable="false" style="pointer-events: none; display: block; width: 100%; height: 100%; overflow: hidden;"><g fill-rule="evenodd">
+                            <path fill-rule="evenodd" d="M61 216.06L45.44 200.5l70.71-70.71-69.3-69.29L61 46.35l69.29 69.3L201 44.94l15.56 15.56-70.71 70.71 70.71 70.71-14.14 14.14-70.71-70.71L61 216.06z"></path>
+                            </g></svg></bbva-core-icon>
+                        </button>
+                    </div>
+                </h6>
+                ChaloBot
+            </div>
+
+            <div class="body" id = "chatbox">
+                <p class = "alicia">Hola! soy ChaloBot, Estoy para responder preguntas relacionadas a la matricula. Espero poder ayudarte.</p>
+                <p class="alicia">Para mayor información accede al siguiente link: <a href="https://www.unsa.edu.pe/" target ="_blank">https://www.unsa.edu.pe/</a></p>
+                <!-- <button  type="button"class="btn btn-green">Creando el boton</button> -->
+                <!-- <a href="#" class="btn btn-green">Creando el boton</a> -->
+                
+            </div>
+            
+            <div id = "userInput">
+                    <input id ="textInput" type ="text" name="msg" placeholder="Escribe un mensaje" style=" font-family: cursive; font-size: 20px;">
+                    <input id = "buttonInput" type = "submit" value="Enviar">
+            </div>
+            
+        </div>
+    </div>
+    <script src="{{url_for('static',filename='js/base.js')}}"></script>
+
+</body>
+</html>

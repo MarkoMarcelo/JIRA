@@ -1,0 +1,61 @@
+{
+    "intents": [
+        {
+            "tag": "hola",
+            "patterns": [
+                "hola",
+                "buen dia",
+                "buenas",
+                "buenos dias",
+                "necesito ayuda",
+                "hi",
+                "oli",
+                "ola",
+                "wuenas",
+                "que hago?",
+                "estas vivo?",
+                "contestame",
+                "ga"
+            ],
+            "responses": [
+                "Hola",
+                "\u00bfEn que puedo ayudarle? ",
+                "\u00bfComo puedo servirte?",
+                "\u00bfQue necesitas?",
+                "\u00bfComo puedo ayudarte?",
+                "\u00bfEn que puedo servirle?",
+                "A sus servicios"
+            ]
+        },
+        {
+            "tag": "bye",
+            "patterns": [
+                "bye",
+                "adios",
+                "gracias",
+                "muchas gracias",
+                "hasta luego",
+                "bai",
+                "ok"
+            ],
+            "responses": [
+                "Un gusto.",
+                "Un placer.",
+                "Espero haber sido de ayuda.",
+                "Ojala haya sido de ayuda."
+            ]
+        },
+        {
+            "tag": "dudas sobre la matricula",
+            "patterns": [
+                "dudas sobre la matricula",
+                "matricula general",
+                "quiero matricularme"
+            ],
+            "responses": [
+                "la matricula es muy importante que desea hacer?",
+                "yo tambien quiero matricularme xd i"
+            ]
+        }
+    ]
+}
